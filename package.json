@@ -1,8 +1,19 @@
 {
-  "name": "mint",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@maitrakhatri/mint",
+  "version": "0.1.5",
+  "private": false,
+  "type": "module",
+  "main": "build/static/js/main.8e4c7c6f.js",
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.14.15",
+    "@rainbow-me/rainbowkit": "^0.12.7",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -10,17 +21,23 @@
     "@types/node": "^16.18.59",
     "@types/react": "^18.2.33",
     "@types/react-dom": "^18.2.14",
+    "classnames": "^2.3.2",
+    "lottie-react": "^2.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "sass": "^1.69.3",
+    "siwe": "^2.0.4",
     "typescript": "^4.9.5",
+    "wagmi": "^0.12.19",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "publish:npm": "rm -rf dist && mkdir dist &&  babel src/App.tsx -d dist --copy-files"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +56,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/preset-typescript": "^7.23.2",
+    "@types/node-sass": "^4.11.5",
+    "microbundle": "^0.15.1",
+    "node-sass": "^7.0.3",
+    "sass": "^1.69.3"
   }
 }
